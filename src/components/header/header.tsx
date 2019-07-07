@@ -11,7 +11,7 @@ import {
 } from 'reactstrap';
 import { forIn } from 'lodash';
 
-import { HEADER } from '../constants';
+import { HEADER } from '../../constants';
 
 import './styles/header.css';
 
@@ -45,10 +45,8 @@ export default class Header extends Component<Props, State> {
     forIn(HEADER.header, (value: HEADER.Link, key: string) => {
       items.push(
         <NavItem key={value.name} >
-          <Link to={value.path}>
-            <NavLink href="">
-              {value.name.toUpperCase()}
-            </NavLink>
+          <Link className="nav-link" to={value.path}>
+            {value.name.toUpperCase()}
           </Link>
         </NavItem>
       );
