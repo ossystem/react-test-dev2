@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import Root from './root';
+import Root from './containers/root';
 import getStore from './/store';
 
 import './App.css';

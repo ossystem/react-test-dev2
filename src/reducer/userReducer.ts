@@ -40,6 +40,7 @@ import {
 const initialState: USER.UserState = {
   loggedIn: false,
   userName: '',
+  fetching: false,
 }
 
 export function userReducer(
@@ -47,6 +48,15 @@ export function userReducer(
     action: userActionsTypes.UserActionTypes
   ): USER.UserState {
     switch (action.type) {
+      case userActionsTypes.SIGN_IN: {
+        return { ...state, fetching: true };
+      }
+      case userActionsTypes.SIGN_IN_SUCCESS: {
+        return { ...state, fetching: false, userName: action.payload.name, loggedIn: true };
+      }
+      case userActionsTypes.SIGN_IN_FAIL: {
+        return { ...state, fetching: false, userName: '', loggedIn: false };
+      }
       default:
         return state
     }

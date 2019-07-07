@@ -5,20 +5,20 @@ export const SIGN_OUT = 'SIGN_OUT';
 export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS';
 export const SIGN_IN_FAIL = 'SIGN_IN_FAIL';
 
-interface signInAction {
+export interface signInAction {
   type: typeof SIGN_IN,
 };
 
-interface signInSuccessAction {
+export interface signInSuccessAction {
   type: typeof SIGN_IN_SUCCESS,
   payload: USER.User,
 };
 
-interface signInFailAction {
+export interface signInFailAction {
   type: typeof SIGN_IN_FAIL,
 };
 
-interface signOutAction {
+export interface signOutAction {
   type: typeof SIGN_OUT,
 };
 
