@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { Store, Dispatch } from 'redux';
+import { Dispatch } from 'redux';
 import { AppState } from '../../reducer';
 import Login from '../../components/login';
 import { userActions } from '../../actions';

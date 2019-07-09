@@ -7,7 +7,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from 'reactstrap';
 import { forIn } from 'lodash';
 

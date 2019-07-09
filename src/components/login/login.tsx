@@ -48,6 +48,7 @@ export default class Login extends Component<Props, State> {
   render() {
     console.log(this.props);
     return (
+    // TODO split this in to separate components (like input, button)
       <Row id="loginPage">
         <h1>Login</h1>
         <Form inline>
